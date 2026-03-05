@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Element Merge Arena 409</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="top glass">
+        <div>
+          <h1>🧠 Element Merge Arena: 409</h1>
+          <p>Merge adjacent cells in candy-grid style to unlock all 409 elements.</p>
+        </div>
+        <button id="retryBtn" class="btn">🔄 Retry Run</button>
+      </header>
+
+      <main class="layout">
+        <aside class="glass side">
+          <h2>Run Stats</h2>
+          <p id="scoreText">Score: 0</p>
+          <p id="highScoreText">High Score: 0</p>
+          <p id="mergeText">Merges: 0</p>
+          <p id="possibleText">Possible Merges In Grid: 0</p>
+          <p id="discoverText">Discovered: 4 / 409</p>
+          <div class="progress"><div id="progressBar"></div></div>
+          <p id="eraText">Era: Nature</p>
+          <p id="statusText">Status: Running</p>
+          <button id="hintBtn" class="btn secondary">💡 Hint</button>
+          <p id="hintText" class="hint"></p>
+        </aside>
+
+        <section class="glass board-wrap" id="boardWrap">
+          <div class="board-head">
+            <h2 id="boardTitle">Nature Terrain Grid</h2>
+            <span>Select two adjacent cells to merge</span>
+          </div>
+          <div id="board" class="board"></div>
+        </section>
+
+        <aside class="glass side">
+          <h2>Latest Discoveries</h2>
+          <ul id="discoveryList"></ul>
+        </aside>
+      </main>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
